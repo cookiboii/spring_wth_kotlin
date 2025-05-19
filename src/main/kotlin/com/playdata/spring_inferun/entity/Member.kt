@@ -15,10 +15,10 @@ class Member  (
 
            @Id
            @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val id: Long ?= null,  //? =  notnull
+             val id: Long ? =null,
 
 
-            var username: String ?= null,
+            var username: String ,
 
            @Column(unique = true )
 

@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 @Entity
 class Post(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-                  val id : Long ?= null,
+                  val id : Long ?= null ,
            var  title : String ,
            var content : String,
 
@@ -19,6 +19,12 @@ class Post(
 
 
     ) {
+    protected constructor():this (
+         title = "",
+        content = "",
+        creationDate = LocalDateTime.now(),
 
-     protected constructor():this (null,"","",LocalDateTime.now())
+
+    )
+
 }
